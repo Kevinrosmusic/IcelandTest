@@ -1,6 +1,6 @@
 # React IcelandTest 
 
-## Este proyecto fue construido con:
+## This project was built with:
 
  - React + Vite
 
@@ -8,27 +8,27 @@
 
 ## Getting Started
 
-Para obtener una copia local en funcionamiento, siga estos sencillos pasos de ejemplo:
+To get a local copy up and running follow these simple example steps:
 
-- En el proyecto, en la página de GitHub, vaya a la [main page of the repository](https://github.com/mrigorir/air-pollution-data)
+- On the project, GitHub page, navigate to the  [main page of the repository](https://github.com/Kevinrosmusic/IcelandTest.git)
 
-- Haga clic en un botón llamado `Code`
+- Click on a button named `code`
 
-- Copie la URL del proyecto como se muestra en la pestaña HTTPS
+- Copy the project URL as displayed on HTTPS tab
 
-- Si está ejecutando el sistema operativo Windows, abra su símbolo del sistema. En Linux, abre tu terminal
+- If you're running Windows Operating System, open your command prompt. On Linux, Open your terminal
 
-- Cambie el directorio de trabajo actual a la ubicación donde desea que se cree el directorio clonado. Déjelo como está si la ubicación actual es donde desea que esté el proyecto.
+- Change the current working directory to the location where you want the cloned directory to be made. Leave as it is if the current location is where you want the project to be. 
 
-- Escribe `git clone` y luego pega la URL que copiaste en el Paso 3.<br>
+- Type `git clone`, and then paste the URL you copied in Step 3.<br>
 
-  `$ git clone https://github.com/mrigorir/air-pollution-data.git` <em>Press Enter key</em><br>
+  `$ git clone https://github.com/Kevinrosmusic/IcelandTest.gitt` <em>Press Enter key</em><br>
 
-- Se creará su copia local.
+- Your local copy will be created.
 
-- Tenga en cuenta que debe tener Git instalado en su PC, esto se puede hacer [here](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+- Please note that you must have Git installed on your PC, this can be done [here](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
 
-- Después de obtener el proyecto apuntando al directorio deseado, ahora necesita instalar las dependencias ejecutando npm install o yarn.
+-  After you get the project aiming to the desired directory, you need now to install dependencies by running npm install or use only yarn.
 
 ## Authors
 
