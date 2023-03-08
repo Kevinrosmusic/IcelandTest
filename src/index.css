@@ -195,7 +195,7 @@ header {
 		left: 0;
 		top: 582px;
 		background: #ffa800;
-		padding: 0px 97px;
+		padding: 0px 0px;
 	}
 
 	.icon-facebook {
@@ -213,13 +213,13 @@ header {
 	.icon-facebook-black {
 		position: absolute;
 		top: 80px;
-		right: 80px;
+		right: 65px;
 	}
 
 	.icon-instagram-black {
 		position: absolute;
 		top: 145px;
-		right: 80px;
+		right: 65px;
 	}
 
 	.text-down {
