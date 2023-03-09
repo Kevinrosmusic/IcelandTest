@@ -14,34 +14,34 @@ import MobileImg from "../../assets/rectangle3.png";
 export const HomePage = () => {
 	const [show, setShow] = useState(null);
 	const moveElement = (e) => {
-		let move = '';
-		let x = '';
-		let y = '';
-		if(e.target.id === "title") {
-			move = document.getElementById('title');
-			x = e.clientX/50;
-			y = e.clientY/10;
+		let move = "";
+		let x = "";
+		let y = "";
+		if (e.target.id === "title") {
+			move = document.getElementById("title");
+			x = e.clientX / 50;
+			y = e.clientY / 10;
 		} else if (e.target.id === "logo") {
-			move = document.getElementById('logo');
-			x = e.clientX/10;
-			y = e.clientY/5;
+			move = document.getElementById("logo");
+			x = e.clientX / 10;
+			y = e.clientY / 5;
 		}
 		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
 		move.style.transition = "none";
-	}
+	};
 
 	const stopElement = (e) => {
-		let stop = '';
-		if(e.target.id === "title") {
-			stop = document.getElementById('title');
+		let stop = "";
+		if (e.target.id === "title") {
+			stop = document.getElementById("title");
 		} else if (e.target.id === "logo") {
-			stop = document.getElementById('logo');
+			stop = document.getElementById("logo");
 		}
 		setTimeout(() => {
 			stop.style.transition = "all ease-in-out .5s";
 			stop.style.transform = "translateX(" + 0 + "px) translateY(" + 0 + "px)";
 		}, 1000);
-	}
+	};
 
 	const handleChangeValue = () => {
 		setShow(!show);
@@ -53,7 +53,7 @@ export const HomePage = () => {
 			<header>
 				<div className='header-container'>
 					<div>
-						<img id="logo" src={logo} alt='' className='logo' onMouseMove={(e) => moveElement(e)} onMouseOut={(e) => stopElement(e)} />
+						<img id='logo' src={logo} alt='' className='logo' onMouseMove={(e) => moveElement(e)} onMouseOut={(e) => stopElement(e)} />
 					</div>
 
 					<label htmlFor='btn-nav' className='btn-label' onClick={handleChangeValue}>
@@ -68,7 +68,9 @@ export const HomePage = () => {
 			</div>
 			{!show && (
 				<div>
-					<h1 id="title" className='principal-text' onMouseMove={(e) => moveElement(e)} onMouseOut={(e) => stopElement(e)}>ICELAND</h1>
+					<h1 id='title' className='principal-text' onMouseMove={(e) => moveElement(e)} onMouseOut={(e) => stopElement(e)}>
+						ICELAND
+					</h1>
 				</div>
 			)}
 
