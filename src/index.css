@@ -10,6 +10,10 @@ html {
 	height: 100vh;
 }
 
+.bg-white {
+	background-color: white;
+}
+
 header {
 	position: fixed;
 	width: 100%;
@@ -187,10 +191,6 @@ nav > span {
 	text-transform: uppercase;
 }
 
-.transition {
-	transition-property: opacity, left, top, height;
-	transition-duration: 3s, 5s;
-}
 
 @keyframes fadeInRightCustom {
 	0% {

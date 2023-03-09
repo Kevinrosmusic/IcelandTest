@@ -23,11 +23,11 @@ export const HomePage = () => {
 		let y = "";
 		if (e.target.id === "title") {
 			move = document.getElementById("title");
-			x = e.clientX / 50;
+			x = e.clientX / 10;
 			y = e.clientY / 10;
 		} else if (e.target.id === "logo") {
 			move = document.getElementById("logo");
-			x = e.clientX / 10;
+			x = e.clientX / 4;
 			y = e.clientY / 5;
 		}
 		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
@@ -43,9 +43,9 @@ export const HomePage = () => {
 			stop = document.getElementById("logo");
 		}
 		setTimeout(() => {
-			stop.style.transition = "all ease-in-out .5s";
+			stop.style.transition = "all ease .2s";
 			stop.style.transform = "translateX(" + 0 + "px) translateY(" + 0 + "px)";
-		}, 1000);
+		}, 300);
 	};
 
 	const handleChangeValue = () => {
@@ -57,7 +57,7 @@ export const HomePage = () => {
 			{/* checkbox that determines when the menu is open or closed to perform the animation of the icon */}
 			<input type='checkbox' id='btn-nav' className='checkbox' />
 			{/*  */}
-			{/* web header we will have the logo with animation and the icon to display the menu */}
+			{/* web header with logo animation and the icon to display the menu */}
 			<header>
 				<div className='header-container'>
 					<div>
@@ -97,7 +97,7 @@ export const HomePage = () => {
 				</div>
 			)}
 			{show && (
-				<div className='transition'>
+				<div>
 					<div className={`rss animate__animated ${show ? "animate__fadeInRight animate__fast" : "animate__fadeOutRight animate__faster"}`}>
 						<div
 							className='icon-facebook-black
