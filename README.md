@@ -4,7 +4,7 @@
 
  - React + Vite
 
- - Animated.css.
+ - Animated.css
 
 ## Getting Started
 
@@ -22,23 +22,20 @@ To get a local copy up and running follow these simple example steps:
 
 - Type `git clone`, and then paste the URL you copied in Step 3.<br>
 
-  `$ git clone https://github.com/Kevinrosmusic/IcelandTest.gitt` <em>Press Enter key</em><br>
+  `$ git clone https://github.com/Kevinrosmusic/IcelandTest.git` <em>Press Enter key</em><br>
 
 - Your local copy will be created.
 
 - Please note that you must have Git installed on your PC, this can be done [here](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
 
--  After you get the project aiming to the desired directory, you need now to install dependencies by running npm install or use only yarn.
+-  After you get the project aiming to the desired directory, you need now to install dependencies by running npm install and then `npm i vite-plugin-svgr`.
+
+- Start the project with : `npm run dev`
 
 
 ##
 ## Authors
 
 👤 **Kevin Palomino**
-
-
-## Muestra tu apoyo
-
-¡Dale un ⭐️ si te gusta este proyecto!
 
 

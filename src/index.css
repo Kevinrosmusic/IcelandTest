@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body,
 html {
 	margin: 0 !important;
 	padding: 0 !important;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	font-family: "Montserrat";
+	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 }
 
@@ -14,15 +16,181 @@ header {
 	z-index: 10;
 }
 
+
+li:hover {
+	color: #ffa800 !important;
+	opacity: 1;
+	
+}
+
+#title {
+	font-style: normal;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+}
+
+main > div > video {
+	position: absolute;
+	top: 0;
+	object-fit: cover;
+}
+
+.header-container {
+	width: 90%;
+	position: relative;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn-label {
+	cursor: pointer !important;
+	width: 2rem;
+	height: 1.4rem;
+}
+
+.header-button {
+	width: 2rem;
+	height: 0.2rem;
+	background: #ffa800;
+	position: absolute;
+	top: 1.9rem;
+	transition: all 0.2s;
+}
+
+.header-button::before,
+.header-button::after {
+	content: "";
+	width: 2rem;
+	height: 0.2rem;
+	background: #ffa800;
+	position: absolute;
+	top: -0.6rem;
+	transition: all 0.2s;
+}
+
+.header-button::after {
+	top: 0.6rem;
+}
+
+.checkbox:checked + header .header-container label .header-button {
+	background: none;
+}
+
+.checkbox:checked + header .header-container label .header-button::after,
+.checkbox:checked + header .header-container label .header-button::before {
+	top: 0;
+}
+
+.checkbox:checked + header .header-container label .header-button::before {
+	transform: rotate(35deg);
+}
+
+.checkbox:checked + header .header-container label .header-button::after {
+	transform: rotate(-35deg);
+}
+
+.logo {
+	position: absolute;
+	width: 116px;
+	height: 35px;
+}
+
+.checkbox {
+	display: none;
+}
+
+.menu {
+	position: absolute;
+	background: #000;
+	top: 0;
+} 
+
+ul {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+li {
+	cursor: pointer;
+	color: transparent;
+	list-style: none;
+	font-style: normal;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	text-shadow: 0 0 2px #ffa800;
+	color: black;
+	opacity: 0.6;
+	transition: 1s;
+}
+
+nav > span {
+	position: absolute;
+	top: 25px;
+	left: 18px;
+	color: #ffa800;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 17px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.04rem;
+}
+
+.image-menu {
+	left: 0;
+	top: 0;
+}
+
+.rss {
+	position: absolute;
+	left: 0;
+}
+
+.icon-facebook,
+.icon-instagram,
+.icon-facebook-black,
+.icon-instagram-black {
+	position: absolute;
+}
+
+.text-down {
+	color: white;
+	position: absolute;
+	left: 234px;
+	background: #ffa800;
+}
+
+.text {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.04em;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 26px;
+	padding: 0px 93px;
+}
+
+.transition {
+	transition-property: opacity, left, top, height;
+	transition-duration: 3s, 5s;
+}
+
 @media (min-width: 393px) and (max-width: 767px) {
 	body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-image: url("./assets/imageback.png");
-		margin: 0 !important;
-		padding: 0 !important;
-		overflow-y: hidden;
-		overflow-x: hidden;
 	}
 	.desktop {
 		display: none;
@@ -31,79 +199,21 @@ header {
 	.tablet {
 		display: none;
 	}
+
 	.mobile {
 		display: block;
 	}
 
 	main > div > video {
-		position: absolute;
-		top: 0;
 		left: 836px;
 		bottom: 0;
 		right: 0;
 		width: 601px;
 		height: 1920px;
-		object-fit: cover;
 		display: none;
 	}
 
-	.header-container {
-		width: 90%;
-		position: relative;
-		margin: 1rem auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.btn-label {
-		cursor: pointer !important;
-		width: 2rem;
-		height: 1.4rem;
-	}
-
-	.header-button {
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: 1.9rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::before,
-	.header-button::after {
-		content: "";
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: -0.6rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::after {
-		top: 0.6rem;
-	}
-
-	.checkbox:checked + header .header-container label .header-button {
-		background: none;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::before {
-		transform: rotate(35deg);
-		top: 0;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::after {
-		transform: rotate(-35deg);
-		top: 0;
-	}
-
 	.logo {
-		position: absolute;
-		width: 116px;
-		height: 35px;
 		left: 0px;
 		top: 15px;
 	}
@@ -114,142 +224,76 @@ header {
 		height: 93px;
 		top: calc(50% - 93px / 2 + 27.5px);
 		left: calc(50% - 351px / 2 + 1px);
-
-		font-style: normal;
-		font-weight: 700;
 		font-size: 76px;
 		line-height: 93px;
-		display: flex;
-		align-items: center;
-	}
-
-	.checkbox {
-		display: none;
 	}
 
 	.menu {
-		position: absolute;
-		background: #000;
 		width: 217px;
 		height: 893px;
 		left: 176px;
-		top: 0;
 	}
 
 	ul {
-		position: absolute;
 		left: 0;
 		right: 25px;
 		top: 139px;
 		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
 	}
+
 	li {
-		cursor: pointer;
-		color: transparent;
-		list-style: none;
-		font-style: normal;
-		font-weight: 800;
 		font-size: 36px;
 		line-height: 85px;
-		letter-spacing: 0.04em;
-		font-family: "Montserrat";
-		-webkit-text-stroke: 1px #ffa800;
 		margin-bottom: 40px;
 	}
 
-	li:hover {
-		color: #ffa800 !important;
-	}
-
 	nav > span {
-		position: absolute;
-		top: 25px;
-		left: 18px;
-		color: #ffa800;
-		font-style: italic;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 17px;
 		display: none;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04rem;
 	}
 
 	.image-menu {
 		width: 45%;
 		height: 100%;
-		left: 0;
-		top: 0;
 	}
 
 	.rss {
 		position: absolute;
 		width: 176px;
 		height: 311px;
-		left: 0;
 		top: 582px;
 		background: #ffa800;
 		padding: 0px 0px;
 	}
 
 	.icon-facebook {
-		position: absolute;
 		top: 20px;
 		display: none;
 	}
 
 	.icon-instagram {
-		position: absolute;
 		top: 20px;
 		display: none;
 	}
 
 	.icon-facebook-black {
-		position: absolute;
 		top: 80px;
 		right: 65px;
 	}
 
 	.icon-instagram-black {
-		position: absolute;
 		top: 145px;
 		right: 65px;
 	}
 
 	.text-down {
-		color: white;
-		position: absolute;
 		width: 48.4%;
 		height: 727px;
-		left: 234px;
 		top: 1189px;
-		background: #ffa800;
 		display: none;
 	}
 
 	.text {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
-		font-style: normal;
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 26px;
 		top: 280px !important;
-		padding: 0px 93px;
-	}
-
-	.transition {
-		transition-property: opacity, left, top, height;
-		transition-duration: 3s, 5s;
 	}
 }
 
@@ -267,73 +311,14 @@ header {
 	}
 
 	main > div > video {
-		position: absolute;
-		top: 0;
 		left: 836px;
 		bottom: 0;
 		right: 0;
 		width: 601px;
 		height: 1920px;
-		object-fit: cover;
-	}
-
-	.header-container {
-		width: 90%;
-		position: relative;
-		margin: 1rem auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.btn-label {
-		cursor: pointer !important;
-		width: 2rem;
-		height: 1.4rem;
-	}
-
-	.header-button {
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: 1.9rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::before,
-	.header-button::after {
-		content: "";
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: -0.6rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::after {
-		top: 0.6rem;
-	}
-
-	.checkbox:checked + header .header-container label .header-button {
-		background: none;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::before {
-		transform: rotate(35deg);
-		top: 0;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::after {
-		transform: rotate(-35deg);
-		top: 0;
 	}
 
 	.logo {
-		position: absolute;
-		width: 116px;
-		height: 35px;
 		left: 36px;
 		top: 27px;
 	}
@@ -344,141 +329,73 @@ header {
 		height: 220px;
 		top: 780px;
 		left: calc(50% - 668px / 2 + 0.5px);
-
-		font-style: normal;
-		font-weight: 700;
 		font-size: 241px;
 		line-height: 220px;
-		display: flex;
-		align-items: center;
-	}
-
-	.checkbox {
-		display: none;
 	}
 
 	.menu {
-		position: absolute;
-		background: #000;
 		width: 708px;
 		height: 1920px;
 		left: 729px;
-		top: 0;
 	}
 
 	ul {
-		position: absolute;
 		left: 0;
 		right: 0;
 		top: 530px;
 		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
 	}
 	li {
-		cursor: pointer;
-		color: transparent;
-		list-style: none;
-		font-style: normal;
-		font-weight: 800;
 		font-size: 96px;
 		line-height: 85px;
-		letter-spacing: 0.04em;
-		font-family: "Montserrat";
-		-webkit-text-stroke: 1px #ffa800;
 		margin-bottom: 115px;
 	}
 
-	li:hover {
-		color: #ffa800 !important;
-	}
-
 	nav > span {
-		position: absolute;
-		top: 25px;
-		left: 18px;
-		color: #ffa800;
-		font-style: italic;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 17px;
 		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04rem;
 	}
 
 	.image-menu {
 		width: 71.7%;
 		height: 1190px;
-		left: 0;
-		top: 0;
 	}
 
 	.rss {
-		position: absolute;
 		width: 234px;
 		height: 727px;
-		left: 0;
 		top: 1190px;
 		background: #000;
 		padding: 0px 97px;
 	}
 
 	.icon-facebook {
-		position: absolute;
 		top: 280px;
 	}
 
 	.icon-instagram {
-		position: absolute;
 		top: 380px;
 	}
 
 	.icon-facebook-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.icon-instagram-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.text-down {
-		color: white;
-		position: absolute;
 		width: 48.4%;
 		height: 727px;
-		left: 234px;
 		top: 1189px;
-		background: #ffa800;
 	}
 
 	.text {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
-		font-style: normal;
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 26px;
 		top: 280px !important;
-		padding: 0px 93px;
-	}
-
-	.transition {
-		transition-property: opacity, left, top, height;
-		transition-duration: 3s, 5s;
 	}
 }
 
@@ -495,73 +412,14 @@ header {
 		display: none;
 	}
 	main > div > video {
-		position: absolute;
-		top: 0;
 		left: 877px;
 		bottom: 0;
 		right: 0;
 		width: 562px;
 		height: 100%;
-		object-fit: cover;
-	}
-
-	.header-container {
-		width: 90%;
-		position: relative;
-		margin: 1rem auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.btn-label {
-		cursor: pointer !important;
-		width: 2rem;
-		height: 1.4rem;
-	}
-
-	.header-button {
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: 1.9rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::before,
-	.header-button::after {
-		content: "";
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: -0.6rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::after {
-		top: 0.6rem;
-	}
-
-	.checkbox:checked + header .header-container label .header-button {
-		background: none;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::before {
-		transform: rotate(35deg);
-		top: 0;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::after {
-		transform: rotate(-35deg);
-		top: 0;
 	}
 
 	.logo {
-		position: absolute;
-		width: 116px;
-		height: 35px;
 		left: 36px;
 		top: 27px;
 	}
@@ -572,213 +430,88 @@ header {
 		height: 195px;
 		top: calc(50% - 195px / 2 + 5.5px);
 		left: calc(50% - 739px / 2 + 26.3px);
-
-		font-style: normal;
-		font-weight: 700;
 		font-size: 160px;
 		line-height: 195px;
-		display: flex;
-		align-items: center;
-	}
-
-	.checkbox {
-		display: none;
 	}
 
 	.menu {
-		position: absolute;
-		background: #000;
 		width: 638px;
 		height: 980px;
 		left: 801px;
-		top: 0;
 	}
 
 	ul {
-		position: absolute;
 		left: 0;
 		right: 0;
 		top: 181px;
 		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
 	}
+
 	li {
-		cursor: pointer;
-		color: transparent;
-		list-style: none;
-		font-style: normal;
-		font-weight: 800;
 		font-size: 70px;
 		line-height: 85px;
 		letter-spacing: 0.04em;
-		font-family: "Montserrat";
-		-webkit-text-stroke: 1px #ffa800;
 		margin-bottom: 48px;
 	}
 
-	li:hover {
-		color: #ffa800 !important;
-	}
-
 	nav > span {
-		position: absolute;
-		top: 25px;
-		left: 18px;
-		color: #ffa800;
-		font-style: italic;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 17px;
 		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04rem;
 	}
 
 	.image-menu {
 		width: 55.7%;
 		height: 665px;
-		left: 0;
-		top: 0;
 	}
 
 	.rss {
-		position: absolute;
 		width: 234px;
 		height: 315px;
-		left: 0;
 		top: 665px;
 		background: #000;
 		padding: 0px 97px;
 	}
 
 	.icon-facebook {
-		position: absolute;
 		top: 101px;
 	}
 
 	.icon-instagram {
-		position: absolute;
 		top: 168px;
 	}
 
 	.icon-facebook-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.icon-instagram-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.text-down {
-		color: white;
-		position: absolute;
 		width: 39.4%;
 		height: 315px;
-		left: 234px;
 		top: 665px;
-		background: #ffa800;
 	}
 
 	.text {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
-		font-style: normal;
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 26px;
 		top: 123px !important;
-		padding: 0px 93px;
-	}
-
-	.transition {
-		transition-property: opacity, left, top, height;
-		transition-duration: 3s, 5s;
 	}
 }
 
 @media (min-width: 1441px) and (max-width: 2560px) {
 	main > div > video {
-		position: absolute;
-		top: 0;
 		left: 1120px;
 		bottom: 0;
 		right: 0;
 		width: 800px;
 		height: 100%;
-		object-fit: cover;
-	}
-
-	.header-container {
-		width: 90%;
-		position: relative;
-		margin: 1rem auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.btn-label {
-		cursor: pointer !important;
-		width: 2rem;
-		height: 1.4rem;
-	}
-
-	.header-button {
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: 1.9rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::before,
-	.header-button::after {
-		content: "";
-		width: 2rem;
-		height: 0.2rem;
-		background: #ffa800;
-		position: absolute;
-		top: -0.6rem;
-		transition: all 0.2s;
-	}
-
-	.header-button::after {
-		top: 0.6rem;
-	}
-
-	.checkbox:checked + header .header-container label .header-button {
-		background: none;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::before {
-		transform: rotate(35deg);
-		top: 0;
-	}
-
-	.checkbox:checked + header .header-container label .header-button::after {
-		transform: rotate(-35deg);
-		top: 0;
 	}
 
 	.logo {
-		position: absolute;
-		width: 116px;
-		height: 35px;
 		left: 36px;
 		top: 27px;
 	}
@@ -789,140 +522,73 @@ header {
 		height: 195px;
 		top: calc(50% - 195px / 2 + 5.5px);
 		left: calc(50% - 739px / 2 + 26.3px);
-
-		font-style: normal;
-		font-weight: 700;
 		font-size: 160px;
 		line-height: 195px;
-		display: flex;
-		align-items: center;
-	}
-
-	.checkbox {
-		display: none;
 	}
 
 	.menu {
-		position: absolute;
-		background: #000;
 		width: 930px;
 		height: 980px;
 		left: 990px;
-		top: 0;
 	}
 
 	ul {
-		position: absolute;
 		left: 0;
 		right: 0;
 		top: 181px;
 		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
 	}
+
 	li {
-		cursor: pointer;
-		color: transparent;
-		list-style: none;
-		font-style: normal;
-		font-weight: 800;
 		font-size: 70px;
 		line-height: 85px;
-		letter-spacing: 0.04em;
-		font-family: "Montserrat";
-		-webkit-text-stroke: 1px #ffa800;
 		margin-bottom: 48px;
 	}
 
-	li:hover {
-		color: #ffa800 !important;
-	}
-
 	nav > span {
-		position: absolute;
-		top: 25px;
-		left: 18px;
-		color: #ffa800;
-		font-style: italic;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 17px;
 		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04rem;
 	}
 
 	.image-menu {
 		width: 51.6%;
 		height: 665px;
-		left: 0;
-		top: 0;
 	}
 
 	.rss {
-		position: absolute;
 		width: 234px;
 		height: 315px;
-		left: 0;
 		top: 665px;
 		background: #000;
 		padding: 0px 97px;
 	}
 
 	.icon-facebook {
-		position: absolute;
 		top: 101px;
 	}
 
 	.icon-instagram {
-		position: absolute;
 		top: 168px;
 	}
 
 	.icon-facebook-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.icon-instagram-black {
-		position: absolute;
 		top: 20px;
 		right: 10px;
 		display: none;
 	}
 
 	.text-down {
-		color: white;
-		position: absolute;
 		width: 39.4%;
 		height: 315px;
-		left: 234px;
 		top: 665px;
-		background: #ffa800;
 	}
 
 	.text {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		letter-spacing: 0.04em;
-		font-style: normal;
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 26px;
 		top: 123px !important;
-		padding: 0px 93px;
-	}
-
-	.transition {
-		transition-property: opacity, left, top, height;
-		transition-duration: 3s, 5s;
 	}
 }
