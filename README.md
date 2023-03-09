@@ -8,7 +8,7 @@
 
 ### This project has been created on in three different resolutions: 
 
- - Desktop: 1040 x 980
+ - Desktop: 1440 x 980
 
  - Tablet: 1024 x 1366
 
