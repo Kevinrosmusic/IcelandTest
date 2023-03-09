@@ -12,7 +12,11 @@ import DesktopImg from "../../assets/rectangleD.png";
 import MobileImg from "../../assets/rectangle3.png";
 
 export const HomePage = () => {
+	// using the useState hook to declare a state variable
 	const [show, setShow] = useState(null);
+
+	// This function recognizes the ID of the element through the event parameter. Depending on the ID, the function
+	// will add styles to the element si it can be moved by the mouse calculating the coordinates from clientX and clientY.
 	const moveElement = (e) => {
 		let move = "";
 		let x = "";
@@ -30,6 +34,7 @@ export const HomePage = () => {
 		move.style.transition = "none";
 	};
 
+	// When the mouse leaves the element, it will restore it's position (translateY and translateX) to it's original location.
 	const stopElement = (e) => {
 		let stop = "";
 		if (e.target.id === "title") {
@@ -49,7 +54,10 @@ export const HomePage = () => {
 
 	return (
 		<main>
+			{/* checkbox that determines when the menu is open or closed to perform the animation of the icon */}
 			<input type='checkbox' id='btn-nav' className='checkbox' />
+			{/*  */}
+			{/* web header we will have the logo with animation and the icon to display the menu */}
 			<header>
 				<div className='header-container'>
 					<div>
@@ -61,11 +69,15 @@ export const HomePage = () => {
 					</label>
 				</div>
 			</header>
+			{/*  */}
+			{/* video in absolute position with a margin to the left to give the desired effect */}
 			<div>
 				<video muted autoPlay loop>
 					<source src={video} type='video/mp4' />
 				</video>
 			</div>
+			{/*  */}
+			{/* We use a terniary operator to see what state the show variable is in, if it is false, the element will not be displayed in the DOM */}
 			{!show && (
 				<div>
 					<h1 id='title' className='principal-text' onMouseMove={(e) => moveElement(e)} onMouseOut={(e) => stopElement(e)}>
@@ -73,9 +85,8 @@ export const HomePage = () => {
 					</h1>
 				</div>
 			)}
-
-			{/* animate__fadeOutDownBig */}
-
+			{/*  */}
+			{/* We apply the tennary operator again to validate the state of the variable and display the images according to the screen visited */}
 			{show !== null && (
 				<div>
 					<div className={`animate__animated  ${show ? "animate__fadeInBottomLeft animate__fast" : "animate__fadeOutBottomLeft animate__faster"}`}>
@@ -87,6 +98,7 @@ export const HomePage = () => {
 			)}
 			{show && (
 				<div className='transition'>
+					{/* icons of social networks black version orange version depending on what is requested to show one or the other */}
 					<div className='rss'>
 						<div
 							className='icon-facebook-black
@@ -115,12 +127,14 @@ export const HomePage = () => {
 							<img src={Instagram} alt='' />
 						</div>
 					</div>
+					{/*  */}
 					<div className='text-down fadeInOpacity'>
 						<span className='text'>“Excellent service - emailed instructions, no hassle, car was ready as soon as we arrived.”</span>
 					</div>
 				</div>
 			)}
-
+			{/*  */}
+			{/* Options menu with a list of options with animations will be initially hidden and when the value of the show variable is true it will be displayed */}
 			{show !== null && (
 				<nav id='nav-menu' className={`menu animate__animated ${show ? "animate__fadeInUp animate__faster" : "animate__fadeOutDown animate__faster"}  `}>
 					<span>English / Español</span>
@@ -133,6 +147,7 @@ export const HomePage = () => {
 					</ul>
 				</nav>
 			)}
+			{/*  */}
 		</main>
 	);
 };
