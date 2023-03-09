@@ -87,7 +87,7 @@ export const HomePage = () => {
 			)}
 			{show && (
 				<div className='transition'>
-					<div className='rss'>
+					<div className={`rss animate__animated ${show ? "animate__fadeInRight animate__fast" : "animate__fadeOutRight animate__faster"}`}>
 						<div
 							className='icon-facebook-black
 							'
@@ -115,7 +115,8 @@ export const HomePage = () => {
 							<img src={Instagram} alt='' />
 						</div>
 					</div>
-					<div className='text-down fadeInOpacity'>
+					{/* className='text-down fadeInOpacity' */}
+					<div className='text-down fadeInOpacity' >
 						<span className='text'>“Excellent service - emailed instructions, no hassle, car was ready as soon as we arrived.”</span>
 					</div>
 				</div>
@@ -123,7 +124,7 @@ export const HomePage = () => {
 
 			{show !== null && (
 				<nav id='nav-menu' className={`menu animate__animated ${show ? "animate__fadeInUp animate__faster" : "animate__fadeOutDown animate__faster"}  `}>
-					<span>English / Español</span>
+					<span className='text-upper'>English / Español</span>
 					<ul>
 						<li className={`animate__animated ${show && "animate__fadeInUp animate__slow"}`}>Inicio</li>
 						<li className={`animate__animated ${show && "animate__fadeInUp animate__slower"}`}>Reservas</li>

@@ -183,9 +183,63 @@ nav > span {
 	padding: 0px 93px;
 }
 
+.text-upper {
+	text-transform: uppercase;
+}
+
 .transition {
 	transition-property: opacity, left, top, height;
 	transition-duration: 3s, 5s;
+}
+
+@keyframes fadeInRightCustom {
+	0% {
+        opacity: 0.5;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInRightCustom {
+    -webkit-animation-name: fadeInRightCustom;
+    animation-name: fadeInRightCustom
+}
+
+.animate__animatedCustom.animate__fastCustom {
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-duration: calc(var(1s)*0.8);
+    animation-duration: calc(var(1s)*0.8)
+}
+
+@keyframes fadeOutRightCustom {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0.5;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0)
+    }
+}
+
+.animate__fadeOutRightCustom {
+    -webkit-animation-name: fadeOutRightCustom;
+    animation-name: fadeOutRightCustom
+}
+
+.animate__animatedCustom.animate__fasterCustom {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-duration: calc(var(1s)/2);
+    animation-duration: calc(var(1s)/2)
 }
 
 @media (min-width: 393px) and (max-width: 767px) {
