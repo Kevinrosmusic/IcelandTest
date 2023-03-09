@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body,
 html {
@@ -6,7 +6,7 @@ html {
 	padding: 0 !important;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	height: 100vh;
 }
 
@@ -16,11 +16,9 @@ header {
 	z-index: 10;
 }
 
-
 li:hover {
 	color: #ffa800 !important;
 	opacity: 1;
-	
 }
 
 #title {
@@ -49,6 +47,7 @@ main > div > video {
 	cursor: pointer !important;
 	width: 2rem;
 	height: 1.4rem;
+	margin-top: 20px;
 }
 
 .header-button {
@@ -58,6 +57,7 @@ main > div > video {
 	position: absolute;
 	top: 1.9rem;
 	transition: all 0.2s;
+	cursor: pointer;
 }
 
 .header-button::before,
@@ -69,10 +69,12 @@ main > div > video {
 	position: absolute;
 	top: -0.6rem;
 	transition: all 0.2s;
+	cursor: pointer;
 }
 
 .header-button::after {
 	top: 0.6rem;
+	cursor: pointer;
 }
 
 .checkbox:checked + header .header-container label .header-button {
@@ -106,7 +108,7 @@ main > div > video {
 	position: absolute;
 	background: #000;
 	top: 0;
-} 
+}
 
 ul {
 	position: absolute;
