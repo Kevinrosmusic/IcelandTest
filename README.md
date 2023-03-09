@@ -6,6 +6,14 @@
 
  - Animated.css
 
+### This project has been created on in three different resolutions: 
+
+ - Desktop: 1040 x 980
+
+ - Tablet: 1024 x 1366
+
+ - Mobile: 393 x 852
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
