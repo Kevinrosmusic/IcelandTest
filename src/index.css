@@ -282,6 +282,8 @@ nav > span {
 		left: calc(50% - 351px / 2 + 1px);
 		font-size: 76px;
 		line-height: 93px;
+		padding: 0!important;
+		margin: 0!important;
 	}
 
 	.menu {
