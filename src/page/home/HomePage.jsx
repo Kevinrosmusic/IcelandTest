@@ -23,16 +23,12 @@ export const HomePage = () => {
 		let y = "";
 		if (e.target.id === "title") {
 			move = document.getElementById("title");
-			// x = e.clientX / 10;
-			// y = e.clientY / 10;
 			x = e.clientX * 200 / window.innerWidth - 50;
 			y = e.clientY * 100 / window.innerHeight - 50;
 		} else if (e.target.id === "logo") {
 			move = document.getElementById("logo");
 			x = e.clientX * 600 / window.innerWidth - 50;
 			y = e.clientY * 800 / window.innerHeight - 50;
-			// x = e.clientX / 4;
-			// y = e.clientY / 5;
 		}
 		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
 		move.style.transition = "none";
@@ -131,7 +127,7 @@ export const HomePage = () => {
 						</div>
 					</div>
 					{/* className='text-down fadeInOpacity' */}
-					<div className='text-down fadeInOpacity' >
+					<div className='text-down fadeInOpacity'>
 						<span className='text'>“Excellent service - emailed instructions, no hassle, car was ready as soon as we arrived.”</span>
 					</div>
 				</div>
